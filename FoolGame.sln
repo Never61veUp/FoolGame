@@ -11,6 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppHost.ServiceDefaults", "
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "foolgamereact", "foolgamereact\foolgamereact.esproj", "{DF6F5C4C-7C73-4FCD-958C-7850EC7965B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoolGame.Host", "FoolGame.Host\FoolGame.Host.csproj", "{D5F34088-1D08-45E5-8750-A6257FB780A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoolGame.Core", "FoolGame.Core\FoolGame.Core.csproj", "{89DD8338-E91A-4329-8CC7-CB6C25828643}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{CB0C03E6-404A-44DF-935D-B2BCA1143D76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoolGame.Test.Core", "xUnitTest\FoolGame.Test.Core.csproj", "{0EFDCCB0-B121-4090-A35D-7F34858EB29B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +39,18 @@ Global
 		{DF6F5C4C-7C73-4FCD-958C-7850EC7965B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF6F5C4C-7C73-4FCD-958C-7850EC7965B4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DF6F5C4C-7C73-4FCD-958C-7850EC7965B4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D5F34088-1D08-45E5-8750-A6257FB780A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5F34088-1D08-45E5-8750-A6257FB780A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5F34088-1D08-45E5-8750-A6257FB780A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5F34088-1D08-45E5-8750-A6257FB780A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89DD8338-E91A-4329-8CC7-CB6C25828643}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89DD8338-E91A-4329-8CC7-CB6C25828643}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89DD8338-E91A-4329-8CC7-CB6C25828643}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89DD8338-E91A-4329-8CC7-CB6C25828643}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EFDCCB0-B121-4090-A35D-7F34858EB29B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EFDCCB0-B121-4090-A35D-7F34858EB29B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EFDCCB0-B121-4090-A35D-7F34858EB29B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EFDCCB0-B121-4090-A35D-7F34858EB29B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,5 +58,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{C32E5AC7-318B-4797-8DC3-068D45ED5D55} = {3A2AE3CA-B770-4FDA-83E9-D70C5324A754}
 		{C29D6B31-8F45-498C-B590-8BF0B50387B5} = {3A2AE3CA-B770-4FDA-83E9-D70C5324A754}
+		{0EFDCCB0-B121-4090-A35D-7F34858EB29B} = {CB0C03E6-404A-44DF-935D-B2BCA1143D76}
 	EndGlobalSection
 EndGlobal

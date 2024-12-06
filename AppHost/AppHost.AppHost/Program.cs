@@ -8,4 +8,6 @@ builder.AddNpmApp("reactvite", "./../../foolgamereact")
     .WithExternalHttpEndpoints()
     .PublishAsDockerFile();
 
+builder.AddProject<Projects.FoolGame_Host>("foolgame-host");
+
 builder.Build().Run();
