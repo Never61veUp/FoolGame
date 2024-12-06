@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aspire", "Aspire", "{3A2AE3CA-B770-4FDA-83E9-D70C5324A754}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppHost.AppHost", "AppHost\AppHost.AppHost\AppHost.AppHost.csproj", "{C32E5AC7-318B-4797-8DC3-068D45ED5D55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppHost.ServiceDefaults", "AppHost\AppHost.ServiceDefaults\AppHost.ServiceDefaults.csproj", "{C29D6B31-8F45-498C-B590-8BF0B50387B5}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "foolgamereact", "foolgamereact\foolgamereact.esproj", "{DF6F5C4C-7C73-4FCD-958C-7850EC7965B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C32E5AC7-318B-4797-8DC3-068D45ED5D55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C32E5AC7-318B-4797-8DC3-068D45ED5D55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C32E5AC7-318B-4797-8DC3-068D45ED5D55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C32E5AC7-318B-4797-8DC3-068D45ED5D55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C29D6B31-8F45-498C-B590-8BF0B50387B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C29D6B31-8F45-498C-B590-8BF0B50387B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C29D6B31-8F45-498C-B590-8BF0B50387B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C29D6B31-8F45-498C-B590-8BF0B50387B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF6F5C4C-7C73-4FCD-958C-7850EC7965B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF6F5C4C-7C73-4FCD-958C-7850EC7965B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF6F5C4C-7C73-4FCD-958C-7850EC7965B4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DF6F5C4C-7C73-4FCD-958C-7850EC7965B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF6F5C4C-7C73-4FCD-958C-7850EC7965B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF6F5C4C-7C73-4FCD-958C-7850EC7965B4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C32E5AC7-318B-4797-8DC3-068D45ED5D55} = {3A2AE3CA-B770-4FDA-83E9-D70C5324A754}
+		{C29D6B31-8F45-498C-B590-8BF0B50387B5} = {3A2AE3CA-B770-4FDA-83E9-D70C5324A754}
+	EndGlobalSection
+EndGlobal
