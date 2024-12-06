@@ -12,11 +12,13 @@ public class Player
     public string Username { get; }
     public IEnumerable<Card> Cards => _cards;
 
-    public void AddCard(params Card[] cards)
+    public void AddCards(params Card[] cards)
     {
-        foreach (var card in cards)
-        {
-            _cards.Add(card);
-        }
+        _cards.AddRange(cards);
+    }
+
+    public void PopCard(Card card)
+    {
+        _cards.Remove(card);
     }
 }
