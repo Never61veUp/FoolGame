@@ -20,11 +20,11 @@ namespace FoolGame.Test.Core
         [Fact]
         public void ToString_ShouldReturnCorrectStringRepresentation()
         {
-            var card = new Card(Suit.Spades, Rank.TWO);
+            var card = new Card(Suit.Spades, Rank.NINE);
 
             var result = card.ToString();
 
-            Assert.Equal("S2", result);
+            Assert.Equal("S9", result);
         }
 
         [Fact]

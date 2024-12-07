@@ -1,12 +1,15 @@
-﻿namespace FoolGame.Core.Model;
+﻿using FoolGame.Core.Abstractions;
 
-public class Desk
+namespace FoolGame.Core.Model;
+
+public class Desk : IDeskCardCoverer, IDeskCardManager
 {
-    private List<Stack<Card>> _cardStacks;
+    private readonly ICardCoveringService _cardCoveringService;
+    private readonly List<Stack<Card>> _cardStacks = [];
 
-    public Desk()
+    public Desk(ICardCoveringService cardCoveringService)
     {
-        _cardStacks = new List<Stack<Card>>();
+        _cardCoveringService = cardCoveringService;
     }
 
     public List<Card> PopAllCardsFromDesk()
@@ -14,17 +17,19 @@ public class Desk
         var cardList = new List<Card>();
         foreach (var card in _cardStacks)
         {
-            cardList.Add(card.Pop());
+            if (card.Count > 0)
+                cardList.Add(card.Pop());
         }
+
         _cardStacks.Clear();
         return cardList;
     }
-    
+
     public void AddNewCard(Card card)
     {
         var newStack = new Stack<Card>();
         newStack.Push(card);
-        
+
         _cardStacks.Add(newStack);
     }
 
@@ -32,21 +37,7 @@ public class Desk
     {
         foreach (var stack in _cardStacks)
         {
-            if (stack.Count == 1)
-            {
-                var card = stack.Peek();
-                if (card.CompareTo(cardOnDesk) == 0)
-                {
-                    if (cardInHand.CompareTo(cardOnDesk) == 1)
-                    {
-                        stack.Push(cardInHand);
-                    }
-                }
-                
-            }
-            
+            _cardCoveringService.CoverCard(cardInHand, cardOnDesk, stack);
         }
     }
-    
-    
 }

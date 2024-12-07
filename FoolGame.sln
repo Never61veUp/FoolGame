@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{CB0C03E6
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoolGame.Test.Core", "xUnitTest\FoolGame.Test.Core.csproj", "{0EFDCCB0-B121-4090-A35D-7F34858EB29B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoolGame.Application", "FoolGame.Application\FoolGame.Application.csproj", "{FC7859D3-D73F-44C0-B5EC-E3752316C239}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{0EFDCCB0-B121-4090-A35D-7F34858EB29B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EFDCCB0-B121-4090-A35D-7F34858EB29B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EFDCCB0-B121-4090-A35D-7F34858EB29B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC7859D3-D73F-44C0-B5EC-E3752316C239}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC7859D3-D73F-44C0-B5EC-E3752316C239}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC7859D3-D73F-44C0-B5EC-E3752316C239}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC7859D3-D73F-44C0-B5EC-E3752316C239}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
