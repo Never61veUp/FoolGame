@@ -9,17 +9,27 @@ public class StackOfCard : IStackOfCard
     
     private readonly Stack<Card> _stack = [];
     private readonly List<Card> _listOfCards = [];
+    private readonly Random _random = new Random();
 
     public StackOfCard()
     {
         InitializeDeck();
     }
     public int RemainingCardsCount() => _stack.Count;
-    public Card GetCard() => _stack.Pop();
+
+    public Card GetCard()
+    {
+        if (!HasCards())
+            throw new InvalidOperationException("No cards left in the stack.");
+        return _stack.Pop();
+    }
     public bool HasCards() => _stack.Count > 0;
 
     public List<Card> PopCards(int count)
     {
+        if (_stack.Count < count)
+            throw new InvalidOperationException("Not enough cards in the stack.");
+        
         var result = new List<Card>();
         
         for (int i = 0; i < count; i++)
@@ -42,28 +52,22 @@ public class StackOfCard : IStackOfCard
     }
     private void ShuffleDeck()
     {
-        int currentCard;
-        Card tempCard;
-        Random random = new Random();
+        var trumpIndex = _random.Next(_listOfCards.Count);
+        SetTrumpCardAndPushToStack(trumpIndex);
         
-        currentCard = random.Next(_listOfCards.Count);
-        SetTrumpCardAndPushToStack(currentCard);
-        
-        for (int i = 0; i < DECK_COUNT - 1; i++)
+        while (_listOfCards.Count > 0)
         {
-            currentCard = random.Next(_listOfCards.Count);
-            _stack.Push(_listOfCards[currentCard]);
-            _listOfCards.Remove(_listOfCards[currentCard]);
+            var cardIndex = _random.Next(_listOfCards.Count);
+            _stack.Push(_listOfCards[cardIndex]);
+            _listOfCards.RemoveAt(cardIndex);
         }
-
-        
     }
     private void SetTrumpCardAndPushToStack(int currentCardIndex)
     {
-        var trumpCard = _listOfCards[currentCardIndex].Suit;
+        var trumpCard = _listOfCards[currentCardIndex];
         foreach (var card in _listOfCards)
         {
-            if(card.Suit == trumpCard)
+            if(card.Suit == trumpCard.Suit)
                 card.IsTrumpCard = true;
         }
         _stack.Push(_listOfCards[currentCardIndex]);
