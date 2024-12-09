@@ -1,24 +1,38 @@
-﻿namespace FoolGame.Core.Model;
+﻿using FoolGame.Core.Abstractions;
 
-public class Player
+namespace FoolGame.Core.Model;
+
+public class Player : IPlayer
 {
-    private List<Card> _cards;
-    
-    public Player(string username)
+    private ICardCollection _cardCollection;
+
+    private Player(string username, ICardCollection cardCollection)
     {
         Username = username;
-        _cards = [];
+        _cardCollection = cardCollection;
     }
-    public string Username { get; }
-    public IEnumerable<Card> Cards => _cards;
-
-    public void AddCards(params Card[] cards)
+    public static Player Create(string playerName, ICardCollection cardCollection)
     {
-        _cards.AddRange(cards);
+        return new Player(playerName, cardCollection);
+
     }
 
-    public void PopCard(Card card)
+    public string Username { get; private set; }
+    public IEnumerable<Card> Cards => _cardCollection.GetAllCards();
+
+    public void AddCards(IEnumerable<Card> cards)
     {
-        _cards.Remove(card);
+        _cardCollection.AddCards(cards);
     }
+
+    public void RemoveCard(Card card)
+    {
+        _cardCollection.RemoveCard(card);
+    }
+
+    public Card GetHighestCard()
+    {
+        return _cardCollection.GetHighestCard();
+    }
+
 }
