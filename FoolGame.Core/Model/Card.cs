@@ -19,7 +19,7 @@ namespace FoolGame.Core.Model
         
         public Suit Suit { get; }
         public Rank Rank { get; }
-        public bool IsTrumpCard { get; }
+        public bool IsTrumpCard { get; set; }
 
         public override string ToString() => GetFirstCharOfSuit() + GetRankValue();
 
