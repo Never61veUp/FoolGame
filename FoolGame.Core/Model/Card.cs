@@ -30,14 +30,7 @@ namespace FoolGame.Core.Model
             return rank.ToString();
         }
 
-        private int CompareRank(Card other)
-        {
-            if(this.Rank < other.Rank)
-                return -1;
-            if(this.Rank > other.Rank)
-                return 1;
-            return 0;
-        }
+        private int CompareRank(Card other) => Rank.CompareTo(other.Rank);
         public int CompareTo(Card? other)
         {
             if (!IsTrumpCard)
